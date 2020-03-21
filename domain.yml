@@ -29,7 +29,7 @@ responses:
   utter_ask_COUNTRY:
   - text: "Where are you from (country)?"
   utter_submit:
-  - text: "{'name'} from {'country'} i have few songs in my playlist would you like to hear?"
+  - text: "{name} from {country} i have few songs in my playlist would you like to hear?"
   utter_did_that_help:
   - text: "Did that help you?"
   utter_happy:
