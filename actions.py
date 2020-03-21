@@ -70,7 +70,7 @@ class ActionFormInfo(FormAction):
             after all required slots are filled"""
 
         # utter submit template
-        dispatcher.utter_message(responses="utter_submit", name=tracker.get_slot('NAME'),
+        dispatcher.utter_message(template="utter_submit", name=tracker.get_slot('NAME'),
                                  country=tracker.get_slot('COUNTRY'))
         return []
 
