@@ -1,0 +1,47 @@
+intents:
+- greet
+- affirm
+- inform
+- name_is
+- country_is
+forms:
+- form_info
+slots:
+  songs:
+    type: text
+  COUNTRY:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  NAME:
+    type: unfeaturized
+entities:
+- songs
+- NAME
+- COUNTRY
+actions:
+- action_retrieve_songs
+responses:
+  utter_greet:
+  - text: "Hey! Mr. Bot here."
+  utter_ask_NAME:
+  - text: "What is ur name Sire?"
+  utter_ask_COUNTRY:
+  - text: "Where are you from (country)?"
+  utter_submit:
+  - text: "{'name'} from {'country'} i have few songs in my playlist would you like to hear?"
+  utter_did_that_help:
+  - text: "Did that help you?"
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_unclear:
+  - text: "I am not sure what are you aiming for?"
+  utter_selection:
+  - text: "Select : "
+    buttons:
+    - title: "drunk"
+      payload: '/inform{"songs":"drunk"}'
+    - title: "sad"
+      payload: '/inform{"songs":"sad"}'
+    - title: "romantic"
+      payload: '/inform{"songs":"english"}'
