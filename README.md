@@ -23,18 +23,27 @@ RASA NLU - Rasa NLU is an open-source natural language processing tool for inten
 RASA CORE - It works as a dialogue management for bot and keeps track of a conversation with the user.
 
 RASA NLU
-nlu.md - consists training data for intent classification and entiity extraction
+
+nlu.md - is a file which contains the training data for Rasa NLU model. This data consists of the example user queries alongside the corresponding intents and entities.
 
      ref:-https://rasa.com/docs/rasa/nlu/training-data-format/
 
 RASA CORE
-stories.md - Rasa stories are a form of training data used to train the Rasa’s dialogue management models.
 
-A story is a representation of a conversation between a user and an AI assistant, converted into a specific format where user inputs are expressed as corresponding intents (and entities where necessary) while the responses of an assistant are expressed as corresponding action names.
+stories.md - is a file which contains training data for the dialogue model. This data consists of stories — actual conversations between a user and an assistant written in a Rasa format, where user inputs are expressed as corresponding intents and entities, and the responses of the assistant are expressed as actions.
+
 
          ref:- https://rasa.com/docs/rasa/core/stories/
 
-domain.yml - The Domain defines the universe in which your assistant operates. It specifies the intents, entities, slots, and actions your bot should know about. Optionally, it can also include responses for the things your bot can say.
+domain.yml -is a file which contains the configuration of the assistant’s domain. It consists of the following pieces:
+
+1. Intents and Entities that are defined in Rasa NLU training data examples;
+
+2. Slots which work like placeholders for saving the details that the assistant has to remember throughout the conversation
+
+3. Templates which define the text responses that an assistant should return when the corresponding utterances are predicted
+
+4. Actions which the assistant should be able to predict and execute.
 
          ref:- https://rasa.com/docs/rasa/core/domains/
 
